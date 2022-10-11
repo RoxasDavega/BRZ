@@ -1,4 +1,4 @@
-function createModeluser(Sequelize, DataTypes) {
+function createModelUser(Sequelize, DataTypes) {
   const User = Sequelize.define("User", {
     id: {
       type: DataTypes.INTEGER,
