@@ -41,6 +41,13 @@ function createModelUser(Sequelize, DataTypes) {
     },
   });
 
+  User.associate = (models) => {
+    User.hasMany(models.Article, {
+      foreignKey: "UserId",
+      sourceKey: "id",
+    });
+  };
+
   return User;
 }
 
